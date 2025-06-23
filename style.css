@@ -1,0 +1,171 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ece9f7 0%, #d1eaf5 100%);
+  color: #22223b;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(90deg, #35424a 60%, #4f5d75 100%);
+  color: #ffffff;
+  padding: 40px 0 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(53, 66, 74, 0.15);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+h2 {
+  color: #1e3c72;
+  margin-top: 0;
+  font-size: 1.7rem;
+  border-left: 4px solid #2a5298;
+  padding-left: 14px;
+  background: #e3f0ff;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(46, 82, 152, 0.07);
+}
+
+/* Tambahkan untuk memperjelas menu navigasi bagian atas */
+header nav ul li a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #e3f0ff;
+  padding: 4px 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+  background: #ffffff33;
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 40px 10vw 40px 10vw;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Animasi fade-in untuk seluruh konten utama */
+main,
+header,
+footer {
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  margin-bottom: 32px;
+  background: #ffffffcc;
+  padding: 24px 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(53, 66, 74, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+section:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 8px 32px rgba(53, 66, 74, 0.16);
+}
+
+a {
+  color: #4f5d75;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #22223b;
+  text-decoration: underline;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 2px 12px rgba(53, 66, 74, 0.15);
+  margin-bottom: 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 18px 0;
+  background: linear-gradient(90deg, #35424a 60%, #4f5d75 100%);
+  color: #ffffff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.project-item {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: projectFadeIn 0.9s cubic-bezier(0.4, 1.4, 0.6, 1) forwards;
+}
+.project-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.project-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.project-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes projectFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-item img {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(53, 66, 74, 0.1);
+  margin-bottom: 12px;
+  transition: transform 0.3s cubic-bezier(0.4, 1.4, 0.6, 1), box-shadow 0.3s;
+}
+.project-item img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 8px 32px rgba(46, 82, 152, 0.18);
+}
+
+/* Efek hover pada ikon kontak */
+#contact a img {
+  transition: transform 0.2s, filter 0.2s;
+}
+#contact a img:hover {
+  transform: scale(1.18) rotate(8deg);
+  filter: brightness(1.2) drop-shadow(0 2px 8px #2a5298aa);
+}
